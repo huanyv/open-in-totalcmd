@@ -1,0 +1,37 @@
+<idea-plugin>
+    <id>io.github.huanyv.totalcmd</id>
+    <name>Open in TotalCmd</name>
+    <version>1.0</version>
+    <vendor email="123@qq.com" url="https://huanyv.github.io">Huanyv</vendor>
+
+    <description><![CDATA[
+      在Total Commander中打开当前文件或者文件夹.............
+    ]]></description>
+
+    <change-notes><![CDATA[
+      在Total Commander中打开当前文件或者文件夹.............
+    ]]></change-notes>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <applicationConfigurable instance="io.github.huanyv.config.SimpleConfigSetting"
+                                 id="io.github.huanyv.config.SimpleConfigSetting" displayName="OpenInTotalCmd"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="io.github.huanyv.OpenInTotalCmd" class="io.github.huanyv.OpenInTotalCmd" text="Open In TotalCmd"
+                description="Open In TotalCommander">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="CutCopyPasteGroup"/>
+            <add-to-group group-id="EditorTabPopupMenu" anchor="after" relative-to-action="CopyReferencePopup"/>
+        </action>
+    </actions>
+
+</idea-plugin>
