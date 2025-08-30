@@ -1,0 +1,7 @@
+
+wincmd.ini     软件设置
+wcx_ftp.ini    FTP配置
+usercmd.ini    用户自定义命令
+DEFAULT.BAR    自定义工具栏
+VERTICAL.BAR   自定义垂直工具栏
+tc.bat         命令行启动脚本（需配置环境变量）
