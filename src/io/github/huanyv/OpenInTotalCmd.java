@@ -25,8 +25,8 @@ public class OpenInTotalCmd extends AnAction {
         VirtualFile virtualFile = event.getData(PlatformDataKeys.VIRTUAL_FILE);
         assert virtualFile != null;
         String filePath = virtualFile.getPath();
-        File file = new File(filePath);
-        filePath = file.getParentFile().getAbsolutePath();
+        // File file = new File(filePath);
+        // filePath = file.getParentFile().getAbsolutePath();
 
         String totalCmdPath = SimpleConfigUtil.getString(Constant.TOTAL_CMD_PATH_SETTING);
         if (totalCmdPath == null || totalCmdPath.trim().length() == 0) {
@@ -38,10 +38,13 @@ public class OpenInTotalCmd extends AnAction {
         cmd.add(totalCmdPath);
         cmd.add("/O");
         cmd.add("/T");
+        cmd.add("/A");
         String panelLocation = SimpleConfigUtil.getString(Constant.PANEL_LOCATION);
         if (Constant.PANEL_LOCATION_LEFT.equals(panelLocation)) {
+            cmd.add("/P=L");
             cmd.add("/L=\"" + filePath + "\"");
         } else {
+            cmd.add("/P=R");
             cmd.add("/R=\"" + filePath + "\"");
         }
         SystemUtil.exec(cmd.toString());

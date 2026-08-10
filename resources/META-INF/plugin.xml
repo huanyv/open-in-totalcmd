@@ -1,15 +1,15 @@
 <idea-plugin>
     <id>io.github.huanyv.totalcmd</id>
     <name>Open in TotalCmd</name>
-    <version>1.0</version>
+    <version>1.3</version>
     <vendor email="123@qq.com" url="https://huanyv.github.io">Huanyv</vendor>
 
     <description><![CDATA[
-      在Total Commander中打开当前文件或者文件夹.............
+        Open the current file or folder in Total Commander Before using it, set the absolute path of TOTALCMD64.EXE and the window panel after opening in Settings -> Other Settings -> OpenInTotalCmd. 在Total Commander中打开当前文件或者文件夹 使用之前，请在设置->其他设置->OpenInTotalCmd，设置TOTALCMD64.EXE的绝对路径，以及打开后的窗口面板
     ]]></description>
 
     <change-notes><![CDATA[
-      在Total Commander中打开当前文件或者文件夹.............
+        Open the current file or folder in Total Commander Before using it, set the absolute path of TOTALCMD64.EXE and the window panel after opening in Settings -> Other Settings -> OpenInTotalCmd. 在Total Commander中打开当前文件或者文件夹 使用之前，请在设置->其他设置->OpenInTotalCmd，设置TOTALCMD64.EXE的绝对路径，以及打开后的窗口面板
     ]]></change-notes>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
